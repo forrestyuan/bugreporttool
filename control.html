@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	</head>
+
+	<body>
+		<header class="header">
+			<nav id="nav" class="navbar navbar-inverse" role="navigation">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+						<a class="navbar-brand" href="#">
+							<h4 class="logoBrand">缺陷管理</h4></a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li>
+								<a href="index.html">首页</a>
+							</li>
+							<li class="active">
+								<a href="control.html">缺陷管理</a>
+							</li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<!--<li><a href="#">登录</a></li>-->
+							<li class="dropdown">
+								<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">欢迎，Admin<span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li>
+										<a href="#">注销</a>
+									</li>
+									<li>
+										<a href="#">退出</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<!-- /.navbar-collapse -->
+				</div>
+				<!-- /.container-fluid -->
+			</nav>
+		</header>
+		<section class="container-fluid">
+			<div class="col-md-3 navbar-inverse">
+				<div><img class="img-responsive" src="img/5.jpeg"/></div>
+				<div style="color: white;">缺陷管理系统</div>
+			</div>
+			<div class="col-md-9">
+				<div class="col-md-12">
+					<ul class="navbar-default list-group">
+						<li class="list-group-item">系统开发员：     程序员yfc</li>
+						<li class="list-group-item">系统开发员代号：    szu1452</li>
+						<li class="list-group-item">开发员所属单位：     深圳大学</li>
+						<li class="list-group-item">系统代号：	0018-1.14.02</li>
+						<li class="list-group-item">系统版本：    version 1.14.02</li>
+						<li class="list-group-item">系统开发日期：    2017/1/10</li>
+						<li class="list-group-item">系统描述:    这个系统是用于管理项目的缺陷报告，在公司上下层，<br>团队之间对整个项目的缺陷 能及时了解，并协同解决bug。</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="list-group">
+				<div href="#" class="list-group-item active">
+					添加缺陷信息
+				</div>
+				<div>
+					<form action="">
+						<table class="table table-bordered">
+							<tr>
+								<td>缺陷编号(id)：</td>
+								<td><input type="text" value="不用输入，自动生成" disabled="disabled" /></td>
+								<td>缺陷标题(title)：</td>
+								<td><input name="title" type="text" placeholder="输入缺陷标题" /></td>
+								<td>缺陷类型(type)：</td>
+								<td>
+									<select name="type">
+										<option value="F">Function </option>
+										<option value="A">Assignment</option>
+										<option value="I">Interface</option>
+										<option value="C">Checking</option>
+										<option value="B">Build/package/merge</option>
+										<option value="D">Documentation</option>
+										<option value="G">Algorithm</option>
+										<option value="U">User Interface</option>
+										<option value="P">Performance</option>
+										<option value="N">Norms</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>优先级(priority)：</td>
+								<td>
+									<select name="priority">
+										<option value="Resolve Immediately">Resolve Immediately</option>
+										<option value="Normal Queue">Normal Queue</option>
+										<option value="Not Urgent">Not Urgent</option>
+									</select>
+								</td>
+								<td>缺陷状态(status)：</td>
+								<td>
+									<select name="status">
+										<option value="Submitted">Submitted</option>
+										<option value="Open">Open</option>
+										<option value="Rejected">Rejected</option>
+										<option value="Resolved">Resolved</option>
+										<option value="Closed">Closed</option>
+									</select>
+								</td>
+								<td>严重程度(severity)：</td>
+								<td>
+									<select name="severity">
+										<option value="Critical">Critical</option>
+										<option value="Major">Major</option>
+										<option value="Minor">Minor</option>
+										<option value="Cosmetic">Cosmetic</option>
+										<option value="Other">Other</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>缺陷来源(Source)：</td>
+								<td>
+									<select name="source">
+										<option value="Requirement">Requirement</option>
+										<option value="Architecture">Architecture</option>
+										<option value="Design">Design</option>
+										<option value="Code">Code</option>
+										<option value="Test">Test</option>
+										<option value="Integration">Integration</option>
+									</select>
+								</td>
+								<td>模块名称(moduleName)：</td>
+								<td><input type="text" name="moduleName" placeholder="请输入模块名称" /></td>
+								<td>缺陷提交人(submitPerson)：</td>
+								<td><input type="text" name="submitPerson" placeholder="请输入缺陷提交人" /></td>
+							</tr>
+							<tr>
+								<td>提交时间(submitTime)	</td>
+								<td><input type="date" name="submitTime" /></td>
+								<td>测试平台(testPlatform)：</td>
+								<td><input type="text" name="testPlatform" placeholder="请输入测试平台" /></td>
+								<td>所属发布版本(version)：</td>
+								<td><input type="text" name="version" placeholder="请输入所入发布版本" /></td>
+							</tr>
+							<tr>
+								<td>是否进行回旋测试（isRound）：</td>
+								<td>
+									<input type="radio" name="isRound" />是
+									<input type="radio" name="isRound" />否
+								</td>
+								<td>所属项目（Project）：</td>
+								<td><input type="text" name="project" placeholder="请输入所属项目" /></td>
+								<td>缺陷起源(origin)：</td>
+								<td>
+									<select name="origin">
+										<option value="Requirement">Requirement</option>
+										<option value="Architecture">Architecture</option>
+										<option value="Design">Design</option>
+										<option value="Code">Code</option>
+										<option value="Test">Test</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>缺陷解决人(solvePerson)：</td>
+								<td><input type="text" name="solvePerson" placeholder="请输入缺陷解决人" /></td>
+								<td>解决时间(solveTime)：</td>
+								<td><input type="date"  name="solveTime"/></td>
+							</tr>
+							<tr>
+								<td>缺陷描述(description)：</td>
+								<td colspan="5">
+									<textarea name="description" rows="5" cols="150" ></textarea>
+								</td>
+							</tr>
+							<tr>
+								<td>原因分析(reason)：</td>
+								<td colspan="5">
+									<textarea name="reason" rows="5" cols="150" ></textarea>
+								</td>
+								
+							</tr>
+							<tr>
+								<td>解决方法(wayToSolve)：</td>
+								<td colspan="5">
+									<textarea name="wayToSolve" rows="5" cols="150" ></textarea>
+								</td>
+							</tr>
+							<tr>
+								<td>备注(sticky)：</td>
+								<td colspan="5">
+									<textarea name="sticky" rows="5" cols="150" ></textarea>
+								</td>
+							</tr>
+						</table>
+						<input style="margin-right: 50px;" type="reset" class="btn-success navbar-right" value="重置界面"/>  
+				      	<input style="margin-right: 50px;" type="submit" class="btn-success  navbar-right" value="添加"/>
+					</form>
+				</div>
+			</div>
+			<div class="col-md-12" style="margin-top: 50px;">
+				<div class="list-group bg-info">
+					<div class="list-group-item active">
+						缺陷查询<span style="color: red;" class="h45 navbar-right">notice:查询条件输入的越精确，查询的信息越精确</span>
+					</div>
+					<div class="table-responsive">
+						<form action="" method="post">
+					      <table class="table table-bordered">
+					        <thead>
+					          <tr>
+					            <th>缺陷标题(title)</th>
+					            <th>状态(status)</th>
+					            <th>优先级(priority)</th>
+					            <th>严重等级(Severity)</th>
+					            <th>所属项目(project)</th>
+					            <th>提交缺陷者(submitPerson)</th>
+					          </tr>
+					        </thead>
+					        <tbody>
+					          <tr>
+					            <td><input type="text" placeholder="输入缺陷标题" /></td>
+					            <td><input type="text" placeholder="输入状态" /></td>
+					            <td><input type="text" placeholder="输入优先级" /></td>
+					            <td><input type="text" placeholder="输入严重等级"/></td>
+					            <td><input type="text" placeholder="输入所属项目" /></td>
+					            <td><input type="text" placeholder="输入提交缺陷者" /></td>
+					          </tr>
+					        </tbody>
+					      </table>
+					    <input type="reset" class="btn-success" value="重置界面"/>  
+				      	<input type="submit" class="btn-success" value="提交查询"/>
+					</form>
+				   </div><!-- /.table-responsive -->
+				</div>
+			</div>
+		</section>
+		<section  class="container-fluid">
+			<div class="col-md-12">
+				<div class="list-group">
+					<div class="list-group-item active">
+						缺陷列表 （查询结果）
+					</div>
+					<div class="table-responsive">
+				      <table class="table table-bordered">
+				        <thead>
+				          <tr>
+				            <th>序号</th>
+				            <th>缺陷编号(id)</th>
+				            <th>缺陷标题(title)</th>
+				            <th>状态(status)</th>
+				            <th>优先级(priority)</th>
+				            <th>严重等级(Severity)</th>
+				            <th>所属发布版本(version)</th>
+				            <th>所属项目(project)</th>
+				            <th>缺陷提交人(submitPerson)</th>
+				            <th>操作</th>
+				          </tr>
+				        </thead>
+				        <tbody>
+				          <tr>
+				            <td>1</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td><a href="showReport.html">查看详情</a></td>
+				          </tr>
+				        </tbody>
+				      </table>
+				   </div><!-- /.table-responsive -->
+				</div>
+			</div>
+		</section>
+		<footer  class="container-fluid">
+			<div class="text-center navbar-inverse" style="color: white; height: 150px;padding: 50px;">
+				SZU 版权信息所有<br> 深圳大学<br>中国广东深圳南山
+			</div>
+		</footer>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

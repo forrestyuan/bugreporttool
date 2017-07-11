@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	</head>
+
+	<body>
+		<header class="header">
+			<nav id="nav" class="navbar navbar-inverse" role="navigation">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+						<a class="navbar-brand" href="#">
+							<h4 class="logoBrand">缺陷管理</h4></a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="active">
+								<a href="index.html">首页</a>
+							</li>
+							<li>
+								<a href="control.html">缺陷管理</a>
+							</li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<!--<li><a href="#">登录</a></li>-->
+							<li class="dropdown">
+								<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">欢迎，Admin<span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li>
+										<a href="#">注销</a>
+									</li>
+									<li>
+										<a href="#">退出</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<!-- /.navbar-collapse -->
+				</div>
+				<!-- /.container-fluid -->
+			</nav>
+		</header>
+		<section class="container-fluid">
+			<div class="col-md-3 navbar-inverse">
+				<div><img class="img-responsive" src="img/5.jpeg"/></div>
+				<div style="color: white;">缺陷管理系统</div>
+			</div>
+			<div class="col-md-9">
+				<div class="col-md-12">
+					<ul class="navbar-default list-group">
+						<li class="list-group-item">系统开发员：     程序员yfc</li>
+						<li class="list-group-item">系统开发员代号：    szu1452</li>
+						<li class="list-group-item">开发员所属单位：     深圳大学</li>
+						<li class="list-group-item">系统代号：	0018-1.14.02</li>
+						<li class="list-group-item">系统版本：    version 1.14.02</li>
+						<li class="list-group-item">系统开发日期：    2017/1/10</li>
+						<li class="list-group-item">系统描述:    这个系统是用于管理项目的缺陷报告，在公司上下层，<br>团队之间对整个项目的缺陷 能及时了解，并协同解决bug。</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="col-md-6">
+				<div class="list-group">
+					<div href="#" class="list-group-item active">
+						团队列表<span class="navbar-right"><a href="#" style="color: white;">More</a><i class=" glyphicon glyphicon-chevron-right"></i></span>
+					</div>
+					<div class="table-responsive">
+				      <table class="table table-bordered">
+				        <thead>
+				          <tr>
+				            <th>序号</th>
+				            <th>团队编号(id)</th>
+				            <th>团队名称</th>
+				            <th>操作</th>
+				          </tr>
+				        </thead>
+				        <tbody>
+				          <tr>
+				            <td>1</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td><a href="">查看详情</a></td>
+				          </tr>
+				        </tbody>
+				      </table>
+				   </div><!-- /.table-responsive -->
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="list-group">
+					<div href="#" class="list-group-item active">
+						项目列表<span class="navbar-right"><a href="#" style="color: white;">More</a><i class=" glyphicon glyphicon-chevron-right"></i></span>
+					</div>
+					<div class="table-responsive">
+				      <table class="table table-bordered">
+				        <thead>
+				          <tr>
+				            <th>序号</th>
+				            <th>项目编号(id)</th>
+				            <th>项目名称</th>
+				            <th>开始日期</th>
+				            <th>预设结束日期</th>
+				            <th>完成状态</th>
+				            <th>操作</th>
+				          </tr>
+				        </thead>
+				        <tbody>
+				          <tr>
+				            <td>1</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td><a href="">查看详情</a></td>
+				          </tr>
+				        </tbody>
+				      </table>
+				   </div><!-- /.table-responsive -->
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="list-group">
+					<div class="list-group-item active">
+						缺陷列表<span class="navbar-right"><a href="#" style="color: white;">More</a><i class=" glyphicon glyphicon-chevron-right"></i></span>
+					</div>
+					<div class="table-responsive">
+				      <table class="table table-bordered">
+				        <thead>
+				          <tr>
+				            <th>序号</th>
+				            <th>缺陷编号(id)</th>
+				            <th>缺陷标题(title)</th>
+				            <th>状态(status)</th>
+				            <th>优先级(priority)</th>
+				            <th>严重等级(Severity)</th>
+				            <th>所属发布版本(version)</th>
+				            <th>所属项目(project)</th>
+				            <th>缺陷提交人(submitPerson)</th>
+				            <th>操作</th>
+				          </tr>
+				        </thead>
+				        <tbody>
+				          <tr>
+				            <td>1</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td>Table cell</td>
+				            <td><a href="showReport.html">查看详情</a></td>
+				          </tr>
+				        </tbody>
+				      </table>
+				   </div><!-- /.table-responsive -->
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="text-center navbar-inverse" style="color: white; height: 150px;padding: 50px;">
+				SZU版权信息所有<br> 深圳大学<br>中国广东深圳南山
+			</div>
+		</footer>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>
